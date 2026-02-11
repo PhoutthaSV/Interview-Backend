@@ -1,32 +1,13 @@
 version: '3.2'
 services:
   api:
-    image: phoutthasv/tplus-api-tansfer-balance-ussd
+    image: phoutthasv/Interview-Backend
     build: ./
     ports:
       # - "3004-3006:9085"
-      - "9699:9699"
+      - "5969:5969"
     restart: always
-  #   deploy:
-  #     mode: replicated
-  #     replicas: 3
-  #     restart_policy:
-  #       condition: on-failure
-  #       max_attempts: 3
-  #     resources:
-  #       limits:
-  #         cpus: '0.50'
-  #         memory: 50M
-  #       reservations:
-  #         cpus: '0.25'
-  #         memory: 20M
-  # web:
-  #   image: "nginx:latest"
-  #   ports:
-  #     - "9085:80"
-
-  #   volumes:
-  #     - ./nginx:/etc/nginx/conf.d
-  #   depends_on:
-  #     - api
+    env_file:
+    - .env
+  
     
