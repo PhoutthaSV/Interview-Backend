@@ -133,7 +133,7 @@ export const queryUserById = async (req,res)=>{
             include : [{
                 model : Permision,
                 as :'permision',
-                attributes : ['perId','perName']
+                attributes : ['perId','perName','perStatus']
             }]
         })
         if (!getUser) return res.status(206).json({resultCode : 206 , resultDesc : `No information` ,detail: null});
