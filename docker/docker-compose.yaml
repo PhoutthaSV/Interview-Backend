@@ -3,10 +3,7 @@ services:
     image: phoutthasv/Interview-Backend
     build: ../
     ports:
-      # - "3004-3006:9085"
       - "5969:5969"
     restart: always
     env_file:
-    - .env
-  
-    
+      - .env
