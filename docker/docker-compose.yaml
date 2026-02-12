@@ -6,4 +6,4 @@ services:
       - "5969:5969"
     restart: always
     env_file:
-      - .env
+      - ../.env
