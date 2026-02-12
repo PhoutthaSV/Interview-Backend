@@ -22,5 +22,5 @@ jobs:
           script: |
             cd ${{ secrets.APP_PATH }}
             git pull origin main
-            docker compose down
-            docker compose up -d --build
+            sudo docker compose stop interview-Backend-api
+            sudo docker compose up -d --build interview-Backend-api

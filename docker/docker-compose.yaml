@@ -1,8 +1,8 @@
 version: '3.2'
 services:
-  api:
+  interview-Backend-api:
     image: phoutthasv/Interview-Backend
-    build: ./
+    build: ../
     ports:
       # - "3004-3006:9085"
       - "5969:5969"
